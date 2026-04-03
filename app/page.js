@@ -252,7 +252,7 @@ export default function Home() {
             level = Math.floor(lines / 10) + 1;
             dropInterval = Math.max(100, 1000 - (level - 1) * 100);
             
-            if (lines >= 10) { // Mission target changed to 10 for better gameplay in Next.js version if you like, or keep at 3
+            if (lines >= 3) { 
                 gameOver = true;
                 paused = true;
                 showOverlay('GOAL REACHED!');
