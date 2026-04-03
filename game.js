@@ -7,8 +7,8 @@ const COLS = 10;
 const ROWS = 20;
 const BLOCK_SIZE = 35;
 
-// GOOGLE SHEETS SETTINGS
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbx9VkzQ97kHw_OJ50mSxsGwtOxBmFabg421OUvFudzpnzSfIzIlDL1-RSOtsz-VB48m/exec";
+// GOOGLE SHEETS SETTINGS (Loaded from .env file)
+const SCRIPT_URL = import.meta.env.VITE_GOOGLE_SHEETS_URL;
 
 canvas.width = COLS * BLOCK_SIZE;
 canvas.height = ROWS * BLOCK_SIZE;
