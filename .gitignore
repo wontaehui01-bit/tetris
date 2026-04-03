@@ -1,6 +1,8 @@
 node_modules
-dist
-.env
-.DS_Store
-.vscode
+.next
+out
+build
+.env*.local
+.vercel
 *.log
+package-lock.json

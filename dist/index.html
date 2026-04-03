@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glass Tetris - Modern Arcade</title>
+    <meta name="description" content="A beautiful glassmorphism style Tetris game with smooth animations and vibrant colors.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <script type="module" crossorigin src="/assets/index-D3cycO4U.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-DsY74v2p.css">
+</head>
+<body>
+    <div class="background-container">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <main class="game-container">
+        <div class="glass-sidebar left">
+            <div class="stat-card">
+                <h3>PLAYER</h3>
+                <div id="player-name-display" class="stat-value" style="font-size: 20px;">Guest</div>
+            </div>
+            <div class="stat-card">
+                <h3>GOAL</h3>
+                <div class="stat-value"><span id="lines-count">0</span>/3</div>
+            </div>
+            <div class="stat-card">
+                <h3>SCORE</h3>
+                <div id="score" class="stat-value">0</div>
+            </div>
+            <div class="stat-card">
+                <h3>TIME</h3>
+                <div id="time" class="stat-value">00:00</div>
+            </div>
+            <div class="stat-card">
+                <h3>LEVEL</h3>
+                <div id="level" class="stat-value">1</div>
+            </div>
+            <div class="stat-card actions-card">
+                <h3>ACTIONS</h3>
+                <div class="action-buttons">
+                    <button id="pauseBtn" class="action-btn">PAUSE</button>
+                    <button id="resetBtn" class="action-btn restart">RESET</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="game-board-container">
+            <canvas id="gameBoard"></canvas>
+            <div id="overlay" class="overlay">
+                <div class="overlay-content">
+                    <h2 id="overlayTitle">GLASS TETRIS</h2>
+                    <div id="nameInputGroup" class="input-group">
+                        <input type="text" id="username" placeholder="NAME" maxlength="10">
+                    </div>
+                    
+                    <div class="overlay-buttons">
+                        <button id="saveRecordBtn" class="overlay-btn save-btn">SAVE RECORD</button>
+                        <button id="startBtn" class="overlay-btn">START GAME</button>
+                        <button id="mainMenuBtn" class="overlay-btn main-btn">MAIN MENU</button>
+                    </div>
+                    
+                    <p id="highScoreText" class="hidden">High Score: <span id="highScore">0</span></p>
+                    
+                    <div id="leaderboard" class="leaderboard">
+                        <h4>TOP 3</h4>
+                        <div id="top3-list">Loading...</div>
+                    </div>
+                </div>
+                <div class="credits">
+                    AI코딩을활용한창의적앱개발 경제학과 원태희
+                </div>
+            </div>
+        </div>
+
+        <div class="glass-sidebar right">
+            <div class="stat-card next-piece-card">
+                <h3>NEXT</h3>
+                <div class="next-preview-container">
+                    <canvas id="nextCanvas"></canvas>
+                </div>
+            </div>
+            <div class="controls-guide">
+                <h3>CONTROLS</h3>
+                <div class="control-item"><span>← →</span> Move</div>
+                <div class="control-item"><span>↑</span> Rotate</div>
+                <div class="control-item"><span>↓</span> Soft Drop</div>
+                <div class="control-item"><span>Space</span> Hard Drop</div>
+                <div class="control-item"><span>P</span> Pause</div>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
